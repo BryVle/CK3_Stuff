@@ -1,17 +1,16 @@
 Please note that this whole thing was created with the help of AI.
 It is way above my own pay grade.
-
 So don't expect anything beyond a novelty.
 
 
 Here is how it works and how to use it:
 Inside the CK3X folder, open the dist folder and drag the contents into your CK3's root folder. So the resulting file structure should look something like so;
-binaries
-CK3X
-clausewitz
-game
-jomini
-launcher
+binaries/
+CK3X/
+clausewitz/
+game/
+jomini/
+launcher/
 CK3X.exe
 
 
