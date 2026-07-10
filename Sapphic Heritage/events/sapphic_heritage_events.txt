@@ -1,0 +1,31 @@
+﻿namespace = sapphic_heritage
+
+sapphic_heritage.0001 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = scope:mother
+				scope:mother = {
+					exists = var:sapphic_heritage_impregnator
+				}
+			}
+			scope:mother.var:sapphic_heritage_impregnator = {
+				save_scope_as = sapphic_heritage_impregnator
+			}
+			scope:child = {
+				if = {
+					limit = {
+						exists = scope:sapphic_heritage_impregnator.house
+					}
+					set_house = scope:sapphic_heritage_impregnator.house
+				}
+			}
+			scope:mother = {
+				remove_variable = sapphic_heritage_impregnator
+			}
+		}
+	}
+}

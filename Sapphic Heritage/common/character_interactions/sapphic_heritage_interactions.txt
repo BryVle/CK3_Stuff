@@ -1,0 +1,59 @@
+﻿sapphic_heritage_impregnate_interaction = {
+	category = interaction_category_friendly
+	icon = seducer
+	interface_priority = 90
+	desc = sapphic_heritage_impregnate_interaction_desc
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			is_alive = yes
+			is_female = yes
+		}
+		scope:recipient = {
+			is_alive = yes
+			is_female = yes
+		}
+		OR = {
+			scope:recipient = {
+				is_spouse_of = scope:actor
+			}
+			scope:recipient = {
+				is_concubine_of = scope:actor
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			is_adult = yes
+			is_pregnant = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = sapphic_heritage_impregnator
+				value = scope:actor
+			}
+			make_pregnant = {
+				father = scope:actor
+				number_of_children = 1
+			}
+			if = {
+				limit = {
+					is_pregnant = yes
+				}
+				set_pregnancy_assumed_father = scope:actor
+			}
+			else = {
+				remove_variable = sapphic_heritage_impregnator
+			}
+		}
+	}
+
+	auto_accept = yes
+}

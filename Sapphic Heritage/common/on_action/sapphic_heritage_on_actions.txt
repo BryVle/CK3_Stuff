@@ -1,0 +1,5 @@
+﻿on_birth_child = {
+	events = {
+		sapphic_heritage.0001
+	}
+}
