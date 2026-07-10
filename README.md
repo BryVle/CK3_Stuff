@@ -17,3 +17,5 @@ CK3X.exe
 
 Then, launch CK3X.exe. This will ask Steam to launch the game as normal, and that's it.
 Once the game is actually running, sapphicHeritage.dll will be loaded from the CK3X's mod folder and modify the game's runtime memory that is responsible for the code that blocks female characters from being assigned as the father of a child. Many mods have worked around this issue by hacking together chains of events, and they work great, but can be a little janky. This approach instead removes the hardcoded block on the game engine itself, so a normal mod could now actually just have a female character impregnate another without those hacky workarounds.
+
+You can test that this works in-game by using the "Sapphic Heritage" folder, which contains a CK3 mod you can drop into your game's local mod folder and load it as normal. Then just right-click on your spouse or concubine to choose the new "Impregnate" option.
